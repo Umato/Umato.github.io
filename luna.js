@@ -21,6 +21,6 @@ fetch('https://umato.github.io/config.json')
     }
 
     const bakeryName = document.getElementById('bakeryName');
-    if (bakeryName) bakeryName.innerHTML = 'Luna Bakery';
+    if (bakeryName) bakeryName.innerHTML = 'пекарня луны';
   })
   .catch(err => console.error('LunaSkin fetch error:', err));
