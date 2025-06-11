@@ -1,6 +1,6 @@
 var lunaConfig = {};
 
-fetch('https://umato.github.io/config.json')
+fetch('https://umato.github.io/LunaSkin/config.json?v=' + Date.now(), { cache: 'no-store' })
   .then(response => response.json())
   .then(function(cfg) {
     lunaConfig = cfg;
