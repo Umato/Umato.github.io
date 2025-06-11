@@ -15,7 +15,8 @@ fetch('https://umato.github.io/config.json?v=' + Date.now(), { cache: 'no-store'
     }
 
     const translations = {
-      "%1 cookies": ["%1 луна-печенек", "%1 луна-печенек"]
+      "%1 cookie":  ["%1 луна-печенька",  "%1 луна-печенька"],
+      "%1 cookies": ["%1 луна-печенек",   "%1 луна-печенек"]
     };
     if (ModLanguage('*', translations)) {
       console.log("Language updated");
