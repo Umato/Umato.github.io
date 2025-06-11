@@ -24,7 +24,7 @@ Game.registerMod("luna_skin",{
 			}
 		});
 
-		fetch('https://umato.github.io/LunaSkin/config.json')
+		fetch('https://umato.github.io/config.json')
 		  .then(r => r.json())
 		  .then(cfg => {
 		    const path = cfg.Web.ImagesPath;
