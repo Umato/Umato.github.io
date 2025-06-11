@@ -1,8 +1,8 @@
 {
- "Name": "Boykisser cookie",
- "ID": "imsuchasillyboykisser",
- "Author": "Cute Little Femboy",
- "Description": "It adds boykisser as a cookie",
+ "Name": "luna cookie",
+ "ID": "luna_skin",
+ "Author": "Umato",
+ "Description": "Luna skin for Cookie Clicker",
  "ModVersion": 1,
  "GameVersion": 2.048,
  "Date": "17/03/2024",
