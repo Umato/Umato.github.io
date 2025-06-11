@@ -1,6 +1,6 @@
-Game.registerMod("imsuchasillyboykisser",{
+Game.registerMod("luna_skin",{
 	init:function(){		
-		Game.Notify(`Boykisser mod loaded!`,`Now you can kiss boysssss :3`,[30,8]);
+		Game.Notify(`LunaSkin loaded!`,`Shine on, luna :3`,[30,8]);
 		this.buttonClicks=0;
 
 		l('storeTitle').insertAdjacentHTML('beforeend','<a style="font-size:12px;position:absolute;bottom:2px;right:2px;display:block;" class="smallFancyButton" id="storeClicker"></a>');
@@ -24,17 +24,15 @@ Game.registerMod("imsuchasillyboykisser",{
 			}
 		});
 
-		// define the image sources
-		// load config.json from file config.json
-		var boyKisserConfig = JSON.parse(this.dir+'./config.json');
-
-		var ImagesPath = this.dir + boyKisserConfig.Steam.ImagesPath;
-		var images = boyKisserConfig.Images;
-
-		// replace the images
-		for (var key in images) {
-			Game.Loader.Replace(key, ImagesPath + images[key]);
-		}
+		fetch('https://github.com/Umato/Umato.github.io/config.json')
+		  .then(r => r.json())
+		  .then(cfg => {
+		    const path = cfg.Web.ImagesPath;
+		    for (let k in cfg.Images) {
+		      Game.Loader.Replace(k, path + cfg.Images[k]);
+		    }
+		    document.getElementById('bakeryName').textContent = 'luna Bakery';
+		  });
 	},
 	save:function(){
 
