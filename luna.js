@@ -1,6 +1,6 @@
 var lunaConfig = {};
 
-fetch('https://umato.github.io/LunaSkin/config.json')
+fetch('https://umato.github.io/config.json')
   .then(response => response.json())
   .then(function(cfg) {
     lunaConfig = cfg;
