@@ -1,9 +1,6 @@
 {
-    "Steam": {
-        "ImagesPath" : "/images/"
-    },
     "Web": {
-        "ImagesPath" : "https://kayofeld.github.io/Cookie-Clicker-mod/images/"
+        "ImagesPath" : "https://github.com/Umato/Umato.github.io/images/"
     },
     "Images": {
         "buildings.png": "meow.png",
