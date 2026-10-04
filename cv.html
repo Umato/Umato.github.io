@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV - Егор Васильев</title>
+  <style>
+    :root{--ink:#1c252b;--muted:#64717a;--accent:#245a73;--line:#d6dee3}
+    *{box-sizing:border-box} body{margin:0;background:#eef2f4;color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.42}
+    .toolbar{max-width:900px;margin:22px auto 0;display:flex;justify-content:space-between;gap:12px;padding:0 18px}.toolbar a,.toolbar button{font:inherit;text-decoration:none;color:var(--ink);background:white;border:1px solid var(--line);border-radius:999px;padding:8px 13px;cursor:pointer}
+    .page{width:min(900px,calc(100% - 36px));margin:14px auto 38px;background:white;padding:38px 46px 34px;box-shadow:0 18px 60px rgba(22,42,52,.12)}
+    h1{font-size:2.15rem;line-height:1;margin:0 0 6px;letter-spacing:-.045em}.subtitle{color:var(--accent);font-weight:650}.contacts{margin-top:12px;color:var(--muted);font-size:.88rem;display:flex;gap:8px;flex-wrap:wrap}.contacts a{color:inherit}.summary{margin:17px 0 0;color:var(--muted)}
+    section{margin-top:22px} h2{font-size:.83rem;color:var(--accent);letter-spacing:.08em;margin:0 0 10px;padding-bottom:5px;border-bottom:1px solid var(--line)}
+    .row{display:flex;justify-content:space-between;gap:18px;align-items:baseline}.row strong{font-size:.95rem}.date{color:var(--muted);font-size:.8rem;white-space:nowrap}.meta{color:var(--muted);font-size:.84rem;margin-top:2px}.project{margin-top:15px}.project:first-of-type{margin-top:0} ul{margin:6px 0 0;padding-left:18px} li{margin:4px 0;font-size:.88rem}
+    .skills{display:grid;grid-template-columns:135px 1fr;column-gap:18px;row-gap:8px;font-size:.86rem}.skills b{font-size:.84rem}
+    @media(max-width:650px){.page{padding:28px 22px}.row{align-items:flex-start}.skills{grid-template-columns:1fr;row-gap:3px}.skills b:not(:first-child){margin-top:7px}}
+    @media print{body{background:white}.toolbar{display:none}.page{width:auto;margin:0;padding:11mm 14mm;box-shadow:none} @page{size:A4;margin:0}}
+  </style>
+</head>
+<body>
+  <div class="toolbar"><a href="index.html">← Портфолио</a><button onclick="window.print()">Печать / сохранить PDF</button></div>
+  <main class="page">
+    <h1>Егор Васильев</h1>
+    <div class="subtitle">Data Science · NLP / LLM / RAG</div>
+    <div class="contacts">
+      <span>Санкт-Петербург, Россия</span><span>·</span>
+      <a href="mailto:vasil3vegor@yandex.ru">vasil3vegor@yandex.ru</a><span>·</span>
+      <a href="https://t.me/Um4to">Telegram @Um4to</a><span>·</span>
+      <a href="https://github.com/Umato">GitHub Umato</a>
+    </div>
+    <p class="summary">Студент направления «Науки о данных» СПбГУ. Фокусируюсь на NLP/LLM и retrieval-системах: работал с RAG, hybrid dense+sparse retrieval, reranking и offline evaluation, а также с расширением токенизаторов и инициализацией эмбеддингов новых токенов. Интересуюсь мультимодальными ML-системами и инструментами для образовательного контента.</p>
+
+    <section>
+      <h2>ОБРАЗОВАНИЕ</h2>
+      <div class="row"><strong>Санкт-Петербургский государственный университет (СПбГУ)</strong><span class="date">выпуск: 2027</span></div>
+      <div class="meta">Бакалавриат, «Науки о данных» · GPA 4.2/5.0</div>
+    </section>
+
+    <section>
+      <h2>ПРОЕКТЫ И ОПЫТ</h2>
+      <div class="project">
+        <div class="row"><strong>RAG-система для «Сириус.Курсов»</strong><span class="date">09.2025 - 01.2026</span></div>
+        <div class="meta">Курсовой проект · retrieval / reranking</div>
+        <ul>
+          <li>Спроектировал и реализовал retriever-пайплайн: dense и hybrid dense+sparse retrieval в Qdrant, sparse-поиск на BM25, фильтрацию по метаданным и объединение результатов; интеграция с LlamaIndex.</li>
+          <li>Реализовал reranking для BGE/Jina/GTE-моделей и динамическую упаковку retrieved chunks под token budget контекста.</li>
+          <li>Построил offline evaluation с Hit@k, Recall@k, MRR, nDCG и MAP; сравнивал конфигурации retrieval и улучшал качество поиска без раскрытия внутренних результатов.</li>
+        </ul>
+      </div>
+      <div class="project">
+        <div class="row"><strong>Адаптация LLM к арабскому языку</strong><span class="date">02.2026 - 05.2026</span></div>
+        <div class="meta">Курсовой проект · tokenization / embeddings · <a href="https://github.com/Umato/arab_embeddings">GitHub</a></div>
+        <ul>
+          <li>Исследовал инициализацию эмбеддингов при расширении словаря Qwen3-0.6B примерно на 47k арабских токенов; адаптировал Token Distillation под кастомный токенизатор и staged training.</li>
+          <li>Сравнивал subtoken mean, FOCUS и FOCUS + Token Distillation, проводил ablation-эксперименты; лучшая конфигурация снизила perplexity примерно на 23% относительно FOCUS-only baseline на held-out split.</li>
+        </ul>
+      </div>
+      <div class="project">
+        <div class="row"><strong>Летняя школа по NLP</strong><span class="date">лето 2025</span></div>
+        <div class="meta">Проект: анализ текстов</div>
+        <ul>
+          <li>Сбор и подготовка текстового корпуса; TF-IDF и embeddings; кластеризация и классификация с логистической регрессией и SVM.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>ТЕХНИЧЕСКИЕ НАВЫКИ</h2>
+      <div class="skills">
+        <b>Язык</b><span>Python</span>
+        <b>ML / NLP / LLM</b><span>PyTorch, Hugging Face Transformers/Datasets, Sentence Transformers, scikit-learn, RAG, embeddings, tokenization, retrieval, reranking</span>
+        <b>Data</b><span>pandas, NumPy, matplotlib</span>
+        <b>Retrieval / БД</b><span>Qdrant, LlamaIndex, SQL, PostgreSQL</span>
+        <b>Инструменты</b><span>Git, Docker, Linux, ffmpeg</span>
+        <b>Математика</b><span>линейная алгебра, теория вероятностей, статистика, дискретная математика</span>
+        <b>Английский</b><span>B2</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
