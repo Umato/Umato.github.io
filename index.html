@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Егор Васильев - Data Science, NLP, LLM и RAG. Проекты по retrieval-системам и адаптации LLM.">
+  <meta name="color-scheme" content="light dark">
+  <title>Егор Васильев - ML / NLP / RAG</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="eyebrow">Data Science · NLP / LLM / RAG</div>
+      <h1>Егор Васильев</h1>
+      <p class="lead">
+        Студент направления «Науки о данных» СПбГУ. Работаю с retrieval-системами и LLM:
+        hybrid search, reranking, offline evaluation, tokenization и embeddings. Интересуюсь
+        мультимодальными ML-системами и инструментами для образовательного контента.
+      </p>
+      <div class="actions" aria-label="Контакты и документы">
+        <a class="button primary" href="cv.html">CV</a>
+        <a class="button" href="https://github.com/Umato" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="button" href="https://t.me/Um4to" target="_blank" rel="noreferrer">Telegram</a>
+        <a class="button" href="mailto:vasil3vegor@yandex.ru">Email</a>
+      </div>
+    </header>
+
+    <section class="section" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <span>01</span>
+        <h2 id="projects-title">Избранные проекты</h2>
+      </div>
+
+      <article class="project featured">
+        <div class="project-topline">
+          <div>
+            <p class="project-kicker">09.2025 - 01.2026</p>
+            <h3>RAG Retriever для «Сириус.Курсов»</h3>
+          </div>
+          <span class="status">private code</span>
+        </div>
+        <p>
+          Спроектировал и реализовал retriever-пайплайн для поиска по учебным материалам:
+          dense и hybrid dense+sparse retrieval в Qdrant, BM25, metadata filtering и объединение результатов.
+          Добавил reranking и динамическую упаковку retrieved chunks под token budget контекста.
+        </p>
+        <p>
+          Построил offline evaluation для сравнения retrieval-конфигураций с Hit@k, Recall@k, MRR, nDCG и MAP.
+          Эксперименты использовались для улучшения качества поиска; внутренние результаты и данные не публикуются.
+        </p>
+        <div class="chips" aria-label="Технологии проекта">
+          <span>Python</span><span>Qdrant</span><span>LlamaIndex</span><span>BM25</span><span>Reranking</span><span>Docker</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-topline">
+          <div>
+            <p class="project-kicker">02.2026 - 05.2026</p>
+            <h3>Arabic Vocabulary Expansion for Qwen3</h3>
+          </div>
+          <a class="project-link" href="https://github.com/Umato/arab_embeddings" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
+        <p>
+          Исследовал инициализацию эмбеддингов при расширении словаря Qwen3-0.6B примерно на 47k арабских токенов.
+          Адаптировал Token Distillation под кастомный токенизатор и staged training, сравнивал subtoken mean,
+          FOCUS и FOCUS + Token Distillation.
+        </p>
+        <p class="result">Лучший запуск снизил perplexity примерно на 23% относительно FOCUS-only baseline на held-out split.</p>
+        <div class="chips" aria-label="Технологии проекта">
+          <span>PyTorch</span><span>Hugging Face</span><span>Tokenization</span><span>Token Distillation</span><span>FineWeb2-HQ</span>
+        </div>
+      </article>
+
+      <article class="project compact">
+        <div class="project-topline">
+          <div>
+            <p class="project-kicker">лето 2025</p>
+            <h3>Летняя школа по NLP</h3>
+          </div>
+        </div>
+        <p>
+          Сбор и подготовка текстового корпуса, TF-IDF и embeddings, кластеризация и классификация текстов
+          с логистической регрессией и SVM.
+        </p>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="stack-title">
+      <div class="section-heading">
+        <span>02</span>
+        <h2 id="stack-title">Стек</h2>
+      </div>
+      <div class="stack-grid">
+        <div><strong>ML / LLM</strong><p>PyTorch, Hugging Face, Sentence Transformers, scikit-learn</p></div>
+        <div><strong>Retrieval</strong><p>Qdrant, LlamaIndex, dense / sparse / hybrid search, reranking</p></div>
+        <div><strong>Data</strong><p>pandas, NumPy, SQL, PostgreSQL, matplotlib</p></div>
+        <div><strong>Tools</strong><p>Git, Docker, Linux, ffmpeg</p></div>
+      </div>
+    </section>
+
+    <section class="section about" aria-labelledby="about-title">
+      <div class="section-heading">
+        <span>03</span>
+        <h2 id="about-title">Коротко</h2>
+      </div>
+      <div class="about-grid">
+        <p><strong>СПбГУ</strong><br>Бакалавриат «Науки о данных», выпуск в 2027</p>
+        <p><strong>English</strong><br>B2</p>
+        <p><strong>Фокус</strong><br>NLP, retrieval, LLM и multimodal ML</p>
+      </div>
+    </section>
+
+    <footer>
+      <span>Егор Васильев</span>
+      <span>Санкт-Петербург · 2026</span>
+    </footer>
+  </main>
+</body>
+</html>
